@@ -1,5 +1,11 @@
 
 
+* [Install](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#Install)
+
+* [Manual](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#Manual)
+
+* [Release History](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#Release History)
+
 
 `bed_anno_methy` help you to get annotation for genomic region based on 450K annotation information and calculate their methylation based on 450K methylation matrix.
 
