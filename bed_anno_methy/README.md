@@ -5,6 +5,8 @@
 
 * __Contact__: wangxinyuhs@126.com
 
+![workflow](https://github.com/methylation/toolkits/blob/master/imgs/bed_anno_methy.jpg "foo")
+
 ### Install
 * bed_anno_methy can be used directly after decompressing. 
 * you could change the permission in Linux, then you can use `bed_anno_methy` to see the manual or just use `perl bed_anno_methy`.
