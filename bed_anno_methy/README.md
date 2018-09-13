@@ -5,7 +5,7 @@
 
 * __Contact__: wangxinyuhs@126.com
 
-![workflow](https://github.com/methylation/toolkits/blob/master/imgs/bed_anno_methy.png "foo")
+![workflow](https://github.com/methylation/toolkits/blob/master/imgs/bed_anno_methy.jpg "foo")
 
 ### Install
 * bed_anno_methy can be used directly after decompressing. 
