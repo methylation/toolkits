@@ -4,7 +4,7 @@
 
 * [Manual](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#Manual)
 
-* [Release History](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#Release History)
+* [Release History](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#Release_History)
 
 
 `bed_anno_methy` help you to get annotation for genomic region based on 450K annotation information and calculate their methylation based on 450K methylation matrix.
@@ -33,7 +33,7 @@ bed_anno_methy -r dmrs.bed -rh -ri DMR -g GPL13534_HumanMethylation450_15017482_
 bed_anno_methy -r UCSC_CGI.bed -ri CGI -g GPL13534_HumanMethylation450_15017482_v.1.1.csv.gz -lc 200 -cc 5 -m TCGA-LGG.gz -o LGG_CGI
 ```
 
-### Release History
+### Release_History
 #### v1.1.1 2018/9/13
 * Rename filtered annotation file and add region identifier at first column.
 * Setting default params: length_cutoff , cg_count_cutoff to 1.
