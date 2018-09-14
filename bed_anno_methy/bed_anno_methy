@@ -4,7 +4,7 @@ use strict;
 use Getopt::Long;
 
 #get annotation and methylation matrix for regions based on 450K annotation information
-our $VERSION = "v1.1.1";
+our $VERSION = "v1.1.2";
 
 #1. params control
 my $length_cutoff = 1;
@@ -195,6 +195,10 @@ else{
 }
 my %cg_methy = ();
 my $head = <$methy_fh>;
+my @samples = split /\t/, $head;
+shift @samples;
+my $sample_num = scalar @samples;
+
 while(<$methy_fh>){
 	s/[\r\n]//g;
 	s/"//g;
@@ -207,23 +211,17 @@ close $methy_fh;
 warn call_time()."4. Calculate mean methylation for each region! This will cost much time based on data size.\n";
 # calculate mean methylation
 open OUT,">","$outdir/region_matrix.txt" or die $!;
-my @samples = split /\t/, $head;
-shift @samples;
 print OUT "$region_identifier\tchr\tstart\tend\t".join "\t",@samples;
 
 open PROBE,"<","$outdir/filtered_region_probe.txt" or die $!;
 <PROBE>; #header
 while(<PROBE>){
 	my @arr = split /\t/;
-
-	# get sample number
+	
 	my $cur_region_id = $arr[0];
 	my @cg  = split /;/, $arr[7];
-	my @a = split /\t/,$cg_methy{$cg[0]};
-	my $sample_num = scalar @a;
-
+	
 	my @mean = ();
-
 	foreach my $m(0..$sample_num - 1){  #for each sample
 		my $sum = 0;
 		my $num = 0;
@@ -256,6 +254,7 @@ bed_anno_methy VERSION: $VERSION
 
 ---------------------------------- H E L P ---------------------------------------
 bed_anno_methy help you to annotate regions and calculate their methylation.
+Feel free to contact wangxinyu@126.com when you meet any questions!
 NOTE: This program maybe cost a few minutes, recommand to use Linux Server (128G RAM, ~1000 regions, ~1.7G methylation matrix, cost ~5mins).
 
 -------------------
@@ -278,7 +277,7 @@ ARGUMENTS:
  	-r,--region
  				region file, the first three columns requires to be: chr, start, end. sorted chr,start is not necessary.
  	-m,--methy
- 				methylation matrix, first column is probes, first row is sample names, sorted probes is not necessary.
+ 				methylation matrix, first column is probes, first row is sample names(required), sorted probes is not necessary.
  	-g,--gpl
  				450K annotation file, eg. GPL13534_HumanMethylation450_15017482_v.1.1.csv.gz.  This file was downloaded from https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL13534
 	-o,--outdir
