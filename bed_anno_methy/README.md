@@ -27,7 +27,7 @@ bed_anno_methy -r UCSC_CGI.bed -ri CGI -g GPL13534_HumanMethylation450_15017482_
 ```
 
 ### Release_History
-#### v1.1.2 2018/9/13
+#### v1.1.2 2018/9/14
 * Modify a bug when CG probe in input region not in methylation matrix.
 #### v1.1.1 2018/9/13
 * Rename filtered annotation file and add region identifier at first column.
