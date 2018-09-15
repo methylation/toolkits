@@ -277,7 +277,7 @@ ARGUMENTS:
  	-r,--region
  				region file, the first three columns requires to be: chr, start, end. sorted chr,start is not necessary.
  	-m,--methy
- 				methylation matrix, first column is probes, first row is sample names(required), sorted probes is not necessary.
+ 				methylation matrix, first column is probes(like cg00000108), first row is sample names(required), sorted probes is not necessary.
  	-g,--gpl
  				450K annotation file, eg. GPL13534_HumanMethylation450_15017482_v.1.1.csv.gz.  This file was downloaded from https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL13534
 	-o,--outdir
