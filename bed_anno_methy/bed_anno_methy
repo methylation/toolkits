@@ -249,12 +249,11 @@ warn call_time()."End! Thanks to use!\n";
 
 # help file
 sub print_helpfile{
-	print qq(
-bed_anno_methy VERSION: $VERSION
-
+	print qq(bed_anno_methy VERSION: $VERSION);
+	print q(
+Feel free to contact wangxinyu\@126.com when you meet any questions!
 ---------------------------------- H E L P ---------------------------------------
 bed_anno_methy help you to annotate regions and calculate their methylation.
-Feel free to contact wangxinyu@126.com when you meet any questions!
 NOTE: This program maybe cost a few minutes, recommand to use Linux Server (128G RAM, ~1000 regions, ~1.7G methylation matrix, cost ~5mins).
 
 -------------------
